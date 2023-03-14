@@ -1,0 +1,277 @@
+*
+{
+    margin: 0;
+    padding: 0; /* space between its content and its border */
+    box-sizing: border-box;
+} 
+body{
+    background:lightblue;
+    display: flex; /*to have flexbox model*/
+    justify-content: center;/*how the browser distributes space between and around content items*/
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main{
+    /*position:relative;*/
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+   /* box-shadow:0 50px 60px rgba(0, 0,0,0.1);
+   box-shadow: 10px 5px 5px red;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);*/
+}
+
+.main .left_section{
+    position: relative;
+    background:rgb(2, 59, 78);
+    padding: 30px;
+}
+.ProfileText{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1.5px solid rgba(234, 223, 223, 0.2);
+}
+
+img{
+    width:120px;
+    height: 170px;
+    overflow: hidden;
+    object-fit:cover;
+    
+}
+.ProfileText h2{
+    color: #fff;
+    font-size: medium;
+    margin-top: 15px;
+   text-transform:uppercase;
+   font-weight: 500;
+   line-height: 1.4em;
+}
+
+.ProfileText span{
+    color: #fff;
+    font-size: medium;
+    margin-top: 5px;
+   text-transform:uppercase;
+   font-weight: 500;
+   line-height: 1.4em;
+}
+
+.contactInfo{
+    padding-top: 20px;
+}
+
+.contactInfo .title{
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.contactInfo ul{
+    position: relative;
+}
+
+.contactInfo ul li{
+    list-style:none;
+    margin-top: 10px;
+    cursor: pointer;/* change shape of the cursor*/
+}
+
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 25px;
+    font-size: 15px;
+    color: #03a9f4;
+}
+
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 400;
+}
+
+.contactInfo ul li span a{
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.contactInfo.education{
+    margin-top: 20px;
+    cursor:text;
+}
+
+.contactInfo.education ul li{
+    cursor:text;
+}
+
+.contactInfo.education h5{
+    color: #03a9f4;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.contactInfo.education h4:nth-child(1){
+    color:#fff;
+    font-weight: 500;
+}
+
+.contactInfo.education h4{
+    color:#fff;
+    font-weight: 300;
+}
+
+.contactInfo.language{
+    margin-top: 30px;
+    cursor:text;
+}
+
+.contactInfo.language span{
+    cursor:text;
+}
+
+.contactInfo.language .percent{
+   position: relative;
+    width: 100%;
+    height:5px;
+    background: black;
+    display: block;
+    margin-top: 7px;
+}
+
+.contactInfo.language .percent div{
+    position:absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    background:#fff;
+}
+
+.main .right_section{
+    position: relative;
+    background:#fff;
+    padding: 30px;
+}
+
+.about{
+    margin-left: 30px;
+    margin-top:30px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color:#003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p{
+    color:black;
+    font-family: 'Poppins',sans-serif;
+}
+
+.project{
+    margin-left: 30px;
+    margin-top:30px;
+    margin-bottom: 50px;
+}
+
+.project ul li{
+    list-style:none;
+    margin-top: 15px;
+}
+
+.project ul li span{
+    color: #03a9f4;
+    font-weight: 700;
+    margin-right: 5px;
+    font-style: none;
+}
+
+.project ul li span .text{
+    margin-left: 10px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+}
+
+.project ul li span a{
+    color:#003147;
+    text-decoration: none;
+}
+
+.about.skills .box{
+    position: relative;
+    width: 95%;
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    flex-direction: row;
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-family: 'Poppins',sans-serif;
+    align-items: center;
+}
+
+.about.skills .box h4{
+    text-transform: uppercase;
+    color: #848c99;
+
+}
+
+.about.skills .box .percent{
+    position: relative;
+    height: 5px;
+    background: #f0f0f0;
+}
+
+.about.skills .box .percent div{
+    position:absolute;
+    height: 100%;
+    background:#03a9f4;
+}
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+} 
+
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.interest ul li i{
+    color:#03a9f4;
+    font-size: 18px;
+    width: 25px;
+}
+
+@media(max-width:600px){
+    .main{
+        margin:10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about.skills .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
